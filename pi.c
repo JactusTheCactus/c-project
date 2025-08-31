@@ -1,27 +1,29 @@
 #include <stdio.h>
+#include <math.h>
 #define LEN(arr) sizeof(arr) / sizeof(*arr)
 int main()
 {
+	float PI = 3.14159265359;
 	void getPI(int A, int B)
 	{
-		float pi = (float)A / (float)B;
-		printf("PI: %f (%d / %d)\n", pi, A, B);
+		float piApp = (float)A / (float)B;
+		float dif = PI - piApp;
+		printf("PI: %f (%d / %d)\n\t%f\n", piApp, A, B, fabs(dif) * pow(10,7));
 	};
 	int approxPI[][2] = {
-		{22, 7},
-		{355, 113},
-		{25, 8},
-		{256,81},
-		{339,108 },
-		{223,71},
-		{377,120},
-		{3927,1250},
-		{62832,20000},
-		{16,5}};
+		{355, 113},		//	2
+		{3927, 1250},	//	72
+		{377, 120},		//	739
+		{223, 71},		//	7,477
+		{22, 7},		//	12,643
+		{339, 108},		//	27,039
+		{25, 8},		//	165,927
+		{256, 81},		//	189,011
+		{16, 5}			//	584,073
+	};
 	int i;
 	for (i = 0; i < LEN(approxPI); i++)
 	{
-		printf("i: %d\n", i);
 		getPI(approxPI[i][0], approxPI[i][1]);
 	};
 	return 0;

@@ -18,5 +18,4 @@ build : $(wildcard *.c)
 			$(i)\
 		) \
 		&& \
-	) \
-	echo
+	) echo
