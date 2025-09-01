@@ -1,6 +1,6 @@
 root = true
 
-[{{Makefile},*.{json,c}}]
+[{{Makefile},*.{json,c,rs}}]
 insert_final_newline = false
 trim_trailing_whitespace = true
 indent_style = tab
