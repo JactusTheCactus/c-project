@@ -1,1 +1,7 @@
-.vscode/
+.vscode
+**/test
+**/test.*
+
+# Added by cargo
+
+/target

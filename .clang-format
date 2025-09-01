@@ -1,0 +1,10 @@
+---
+BasedOnStyle: LLVM
+IndentWidth: 4
+---
+Language: C
+ColumnLimit: 0
+Cpp11BracedListStyle: true
+AlignAfterOpenBracket: BlockIndent
+AlignArrayOfStructures: Left
+---

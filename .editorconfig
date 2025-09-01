@@ -1,7 +1,12 @@
 root = true
-[*]
+
+[{{Makefile},*.{json,c}}]
+insert_final_newline = false
+trim_trailing_whitespace = true
 indent_style = tab
 indent_size = 4
 tab_width = 4
-insert_final_newline = false
-trim_trailing_whitespace = true
+
+[*.{yaml,clang-format}]
+indent_style = space
+indent_size = 2
