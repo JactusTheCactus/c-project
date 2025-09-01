@@ -8,7 +8,7 @@ build : $(wildcard *.c)
 	mkdir -p $(OUT)
 	$(foreach i, \
 		$^, \
-		echo && \
+		-clear -x && \
 		echo "<$(i)>" && \
 		gcc $(i) -o $(patsubst %.c, \
 			$(OUT)/%, \
