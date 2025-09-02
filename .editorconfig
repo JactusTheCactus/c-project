@@ -4,7 +4,7 @@ insert_final_newline = false
 trim_trailing_whitespace = true
 indent_style = tab
 indent_size = 4
-[{.vscode/settings.json,.vscode/tasks.json,Makefile,config.js,pi.c}]
+[{.vscode/tasks.json,Makefile,config.js,pi.c}]
 # Placeholder
 # No specific rules yet
 [{}]

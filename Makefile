@@ -1,12 +1,12 @@
-.PHONY: all clean c_build js_build
+.PHONY: all clean
 OUT = bin
 C = $(patsubst %.c,$(OUT)/%,$(wildcard *.c))
-all : $(C) js_build
+all : $(C) .editorconfig .gitignore
 $(OUT)/% : %.c
 	mkdir -p $(OUT)
 	gcc $< -o $@
 	$@
-js_build : *.js
+.editorconfig .gitignore : config.js
 	node config.js
 clean :
 	rm -rf $(OUT)
