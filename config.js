@@ -44,12 +44,12 @@ try {
 try {
 	fs.writeFileSync(".editorconfig", [
 		"root = true",
-		"\n[*]",
+		"[*]",
 		"insert_final_newline = false",
 		"trim_trailing_whitespace = true",
 		"indent_style = tab",
 		"indent_size = 4",
-		`\n[{${findFiles(
+		`[{${findFiles(
 			".",
 			new RegExp(
 				[
@@ -62,7 +62,7 @@ try {
 		).join(",")}}]`,
 		"# Placeholder",
 		"# No specific rules yet",
-		`\n[{${findFiles(
+		`[{${findFiles(
 			".",
 			new RegExp(
 				[

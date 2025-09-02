@@ -1,15 +1,12 @@
 root = true
-
 [*]
 insert_final_newline = false
 trim_trailing_whitespace = true
 indent_style = tab
 indent_size = 4
-
 [{.vscode/settings.json,.vscode/tasks.json,Makefile,config.js,pi.c}]
 # Placeholder
 # No specific rules yet
-
 [{}]
 # Set to match Yaml, but the project currently has none
 indent_style = space
