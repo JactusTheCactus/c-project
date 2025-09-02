@@ -1,7 +1,2 @@
 .vscode
-**/test
-**/test.*
-
-# Added by cargo
-
-/target
+test.editorconfig

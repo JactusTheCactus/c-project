@@ -5,7 +5,7 @@ insert_final_newline = false
 trim_trailing_whitespace = true
 indent_size = 4
 
-[{{Makefile},*.{json,c}}]
+[{{Makefile},*.{json,js,c}}]
 indent_style = tab
 tab_width = 4
 
