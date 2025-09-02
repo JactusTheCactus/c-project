@@ -27,33 +27,55 @@ function findFiles(dir, regex, baseDir = dir) {
 	}
 	return results;
 }
-[
-	[
-		"test.editorconfig",
-		[
-			/Makefile/,
-			/.*\.(?:js(?:on)?|c)/
-		],
-		""
-	],
-	[
-		".gitignore",
-		[
-			/test(?:\..*)?/,
-			/\.vscode/
-		],
-		"\n"
-	]
-].forEach(config => {
-	try {
-		fs.writeFileSync(config[0], `${findFiles(
+try {
+	fs.writeFileSync(".gitignore", `${findFiles(
+		".",
+		new RegExp(
+			[
+				/test(?:\..*)?/,
+				/\.vscode/
+			]
+				.join("|")
+				.replace(/\//g, ""))
+	).join("\n")}`);
+} catch (err) {
+	console.error("Error writing content to file:", err);
+}
+try {
+	fs.writeFileSync(".editorconfig", [
+		"root = true",
+		"\n[*]",
+		"insert_final_newline = false",
+		"trim_trailing_whitespace = true",
+		"indent_style = tab",
+		"indent_size = 4",
+		`\n[{${findFiles(
 			".",
 			new RegExp(
-				config[1]
+				[
+					/Makefile/,
+					/.*\.(?:js(?:on)?|c)/
+				]
 					.join("|")
-					.replace(/\//g, ""))
-		).join(config[2])}`);
-	} catch (err) {
-		console.error(`Error writing content to ${config[0]}:`, err);
-	}
-});
+					.replace(/\//g, "")
+			)
+		).join(",")}}]`,
+		"# Placeholder",
+		"# No specific rules yet",
+		`\n[{${findFiles(
+			".",
+			new RegExp(
+				[
+					/.*\.(?:ya?ml)/
+				]
+					.join("|")
+					.replace(/\//g, "")
+			)
+		).join(",")}}]`,
+		"# Set to match Yaml, but the project currently has none",
+		"indent_style = space",
+		"indent_size = 2",
+	].join("\n"));
+} catch (err) {
+	console.error("Error writing content to file:", err);
+}
