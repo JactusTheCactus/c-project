@@ -1,1 +1,1 @@
-This is just a repository for practicing and getting used to [`C`](https://en.m.wikipedia.org/wiki/C_(programming_language))
+This is just a personal sandbox for practicing and getting used to different languages
