@@ -54,7 +54,8 @@ try {
 			new RegExp(
 				[
 					/Makefile/,
-					/.*\.(?:js(?:on)?|c)/
+					/.*\.(?:js(?:on)?|c)/,
+					/.*\.(?:cs(?:proj(?:\.user)?)?)/
 				]
 					.join("|")
 					.replace(/\//g, "")
