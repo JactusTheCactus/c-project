@@ -4,7 +4,7 @@ insert_final_newline = false
 trim_trailing_whitespace = true
 indent_style = tab
 indent_size = 4
-[{.vscode/tasks.json,Makefile,config.js,pi.c}]
+[{.vs/sandbox/v17/DocumentLayout.json,.vscode/tasks.json,Form1.Designer.cs,Form1.cs,Makefile,Program.cs,config.js,obj/Debug/net9.0-windows/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs,obj/Debug/net9.0-windows/sandbox.AssemblyInfo.cs,obj/Debug/net9.0-windows/sandbox.AssemblyInfoInputs.cache,obj/Debug/net9.0-windows/sandbox.GlobalUsings.g.cs,obj/Debug/net9.0-windows/sandbox.assets.cache,obj/Release/net9.0-windows/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs,obj/Release/net9.0-windows/sandbox.AssemblyInfo.cs,obj/Release/net9.0-windows/sandbox.AssemblyInfoInputs.cache,obj/Release/net9.0-windows/sandbox.GlobalUsings.g.cs,obj/Release/net9.0-windows/sandbox.assets.cache,obj/project.assets.json,obj/project.nuget.cache,obj/sandbox.csproj.nuget.dgspec.json,obj/sandbox.csproj.nuget.g.props,obj/sandbox.csproj.nuget.g.targets,pi.c,sandbox.csproj,sandbox.csproj.user}]
 # Placeholder
 # No specific rules yet
 [{}]
