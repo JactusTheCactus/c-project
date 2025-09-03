@@ -55,7 +55,7 @@ try {
 				[
 					/Makefile/,
 					/.*\.(?:js(?:on)?|c)/,
-					/.*\.(?:cs(?:proj(?:\.user)?)?)/
+					/.*\.(?:cs)/
 				]
 					.join("|")
 					.replace(/\//g, "")
